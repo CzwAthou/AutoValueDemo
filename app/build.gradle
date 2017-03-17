@@ -28,6 +28,7 @@ dependencies {
 //    })
     compile 'com.android.support:appcompat-v7:24+'
 //    testCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.6.2'
 
     provided 'com.google.auto.value:auto-value:1.3'
     apt 'com.google.auto.value:auto-value:1.3'
@@ -40,4 +41,7 @@ dependencies {
     apt 'com.ryanharter.auto.value:auto-value-parcel:0.2.1'
     // Optionally for TypeAdapter support
     compile 'com.ryanharter.auto.value:auto-value-parcel-adapter:0.2.5'
+
+    compile 'se.emilsjolander:intentbuilder-api:0.14.0'
+    apt 'se.emilsjolander:intentbuilder-compiler:0.14.0'
 }

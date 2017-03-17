@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ParacableActivity"></activity>
+        <activity android:name=".SerializableActivity"></activity>
     </application>
 
 </manifest>

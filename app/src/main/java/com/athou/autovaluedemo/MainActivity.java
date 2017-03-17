@@ -1,6 +1,5 @@
 package com.athou.autovaluedemo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,20 +10,12 @@ import com.athou.autovaluedemo.bean.Story;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        try { //避免出现java.lang. NoClassDefFoundError: android.os.AsyncTask
-            Class.forName("com.google.gson.Gson");
-        } catch (Throwable ignore) {
-            // ignored
-            ignore.printStackTrace();
-        }
     }
 
     public void OnClickBean2Gson(View v) {
@@ -48,14 +39,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnClickParcelable(View v) {
-        Story story = Story.create(100, "hahaha");
-
-        Intent intent = new Intent(this, ParacableActivity.class);
-//        intent.putExtra("story", story);
-        startActivity(intent);
+        Story story = Story.create(101, "哈哈哈");
+        startActivity(new ParacableActivityIntentBuilder(story).build(this));
     }
 
     public void OnClickSerializable(View v) {
-
+        NullableStory story = NullableStory.create(102, "哈哈哈哈哈哈");
+        startActivity(new SerializableActivityIntentBuilder(story).build(this));
     }
 }
