@@ -2,6 +2,7 @@ package com.athou.autovaluedemo.bean;
 
 import android.os.Parcel;
 
+import com.athou.autovaluedemo.bean.Story;
 import com.ryanharter.auto.value.parcel.TypeAdapter;
 
 

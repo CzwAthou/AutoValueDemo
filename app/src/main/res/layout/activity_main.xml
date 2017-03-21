@@ -27,6 +27,13 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:onClick="OnParentWithChild"
+        android:text="ParentWithChild"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:onClick="OnClickParcelable"
         android:text="Parcelable"/>
 
